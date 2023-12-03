@@ -14,7 +14,8 @@ projeto feito para usuarios poderem avaliar e descrever sobre seus filmes seleci
 
 # Layout de login e register
 
-![image](https://github.com/paulloroberto63/FrontAndMovies/assets/95132692/dacb0850-f227-4f64-bb0a-c42f03654c16)
+![image](https://github.com/paulloroberto63/FrontAndMovies/assets/95132692/14ef91ff-b2aa-4741-b886-c8f6681a827c)
+
 
 
 ![image](https://github.com/paulloroberto63/FrontAndMovies/assets/95132692/c04357a5-14b0-4830-b9e0-835ffe302e03)
