@@ -1,5 +1,3 @@
-![image](https://github.com/paulloroberto63/FrontAndMovies/assets/95132692/c1f32703-c5b2-4914-9750-58b49777f090)# FrontAndMovies
-
 projeto feito para usuarios poderem avaliar e descrever sobre seus filmes selecionados
 
 # Ferramentas utilizadas neste projeto
