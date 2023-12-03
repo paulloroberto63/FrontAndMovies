@@ -6,7 +6,7 @@ projeto feito para usuarios poderem avaliar e descrever sobre seus filmes seleci
 # Ferramentas utilizadas neste projeto
 
 - JavaScript
-- Nodej
+- Nodejs
 - Express
 - Html
 - Css
