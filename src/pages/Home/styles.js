@@ -22,7 +22,7 @@ export const Container = styled.div`
   > main {
     max-width: 1137px;
 
-    margin: 1rem 6rem;
+    margin: 1rem 35rem;
 
     grid-area: content;
     overflow-y: auto;
@@ -55,10 +55,12 @@ export const AddMovies = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  
+  
   margin-top: 2rem;
-  gap: 2rem;
+  gap: 8rem;
 
+  
   @media (min-width: 1024px){
     grid-area: addmovies;
     flex-direction: row;
@@ -67,8 +69,8 @@ export const AddMovies = styled.div`
       margin-left: -2rem;
     }
 
-    width: 1100px;
-    margin-left: 130px;
+    width: 1500px;
+    margin-left: 500px;
 
     display: flex;
     align-items: center;
@@ -81,7 +83,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   flex-direction: column;
   
   @media (min-width: 1024px){
@@ -94,6 +96,8 @@ export const NewMovie = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+
   
 
   background-color: ${({ theme }) => theme.COLORS.PINK};
