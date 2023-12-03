@@ -1,12 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.section`
+  margin: 1px 0 2rem;
 
-  margin: 40px 0;
+  > h2 {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+  
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
 
- > h2 {
-  margin-bottom: 24px;
-  font-weight: 400;
-  font-size: 20px;
-  color: ${({theme}) => theme.COLORS.TEXT_GRAY};
- }`
+    padding-top: 1rem;
+  }
+
+`;

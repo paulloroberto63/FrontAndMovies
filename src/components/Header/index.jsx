@@ -1,22 +1,49 @@
-import { Container, Profile, Search, Logout} from "./styles";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export function Header() {
-    return(
-        <Container>
-         <h1>RocketMovies</h1>
-         
-         <Search placeholder="Pesquisar pelo titulo"/>
-         
-         <Profile to="/profile">
+import { Container, Profile, Search, Brand, Logout  } from './styles';
+
+import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
+
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+
+export function Header({children}) {
+  const { signOut, user } = useAuth();
+  const navigation = useNavigate();
+
+  function handleSignOut(){
+    navigation("/");
+    signOut();
+  }
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+
+  return (
+    <Container>
+      <Brand>
+        <h1>RocketMovies</h1>
+      </Brand>
+
+      <Search>
+        {children}
+      </Search>
+
+      <Profile to="/profile">
+
         <div>
-            <strong>Paullo Roberto</strong>
-            <Logout>Sair</Logout>
-         </div>
-         
-         <img 
-          src="https://github.com/paulloroberto63.png" 
-          alt="Foto do usuario" />
-         </Profile>
-</Container>
-    );
+          <strong>{user.name}</strong>
+        </div>
+        <img 
+          src={avatarUrl}
+          alt={user.name} 
+        />
+      </Profile>
+
+      <Logout onClick={handleSignOut}>
+        Sair
+      </Logout>
+    </Container>
+  );
 }

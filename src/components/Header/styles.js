@@ -1,74 +1,138 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const Container = styled.header`
-  grid-area: header;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (max-width: 700px){
+    width: 100%;
 
-  gap: 64px;
-  padding: 0 123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  width: 100%;
-  height: 116px;
+  }
+  
+  @media (min-width: 720px){
+    grid-area: header;
+  
+    width: 100%;
+    height: 105px;
 
-  border-bottom: 1px solid ${({theme}) => theme.COLORS.GRAY_300};
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
- > h1 {
-    color: ${({theme}) => theme.COLORS.PINK};
-    font-size: 24px;
-    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 80px;
+
+    > h1 {
+      font-size: clamp(1rem, 1.3rem, 5vw);
+      font-style: normal;
+      font-weight: 700;
+
+      color:${({ theme }) => theme.COLORS.PINK};
+    }
+  }
+  
+`;
+
+export const Profile = styled(Link)`
+  @media (max-width: 700px){
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-`
-
-export const Search = styled.input`
-  width: 100%;
-  height: 56px;
-    
-  padding: 18px 16px;
-
-  border: 0;
-  border-radius: 10px;
-  color: ${({theme}) => theme.COLORS.WHITE};
-  background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
-  &::placeholder {
-  color: ${({theme}) => theme.COLORS.GRAY_200};
-  }`
-  
-  export const Profile = styled(Link)`
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  color: ${({theme}) => theme.COLORS.WHITE_100};
+  justify-content: flex-end;
 
   > img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
+    
+    width: 56px;
+    height: 56px;
 
-    border: 1px solid ${({theme}) => theme.COLORS.GRAY_300};
+    border-radius: 50%;
   }
-  
 
   > div {
     display: flex;
     flex-direction: column;
-   
+    align-items: flex-end;
+    margin-right: 1rem;
+
+    line-height: 1rem;
+    margin-left: 16px;
+    line-height: 24px;
+
     strong {
-      white-space: nowrap;
+      font-size: 18px;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+      margin-bottom: 0.5rem;
     }
   }
-`
 
-export const Logout = styled.div`
-  background: transparent;
+`;
+
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  flex-grow: 1;
+
+  @media (max-width: 700px){
+    margin-bottom: 1rem;
+  }
+`;
+
+export const Brand = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  > h1 {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+
+    color:${({ theme }) => theme.COLORS.PINK};
+  }
+
+  @media (max-width: 700px){
+    > h1 {
+      font-size: 2.5rem;
+      margin-top: 5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+`;
+
+export const Logout = styled.button`
   border: none;
-  align-self: flex-end;
+  background: none;
 
-  font-size: 14px;
-  color: ${({theme}) => theme.COLORS.GRAY_200};
-`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+
+  position: absolute;
+  top: 57px;
+  right: 151px;
+
+  @media (max-width: 700px){
+    position: initial;
+    top: initial;
+    right: initial;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+
