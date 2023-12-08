@@ -79,8 +79,8 @@ export const Container = styled.div`
 export const Form = styled.form`
   width: 100%;
 
-  max-width: 1100px;
-  margin: 3rem 40rem auto;
+  max-width: 1150px;
+  margin: 3rem 5rem auto;
 
   display: flex;
   align-items: left;

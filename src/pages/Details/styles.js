@@ -182,4 +182,3 @@ export const ButtonDelete = styled.button`
     opacity: 0.5;
   }
 `;
-
