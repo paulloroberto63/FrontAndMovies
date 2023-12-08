@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://mymovies-api-hric.onrender.com"
+  baseURL: "https://rocketmovie-api-wmdi.onrender.com"
 });
